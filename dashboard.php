@@ -18,6 +18,7 @@ if (isset($_GET['logout'])) {
     }
 }
 ?>
+<!-- test -->
 
 <!DOCTYPE html>
 <html lang="en">
