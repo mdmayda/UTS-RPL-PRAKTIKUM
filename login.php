@@ -88,7 +88,10 @@ if (isset($_POST['login_btn'])) {
                     <label>Password</label>
                 </div>
                 <input type="submit" id="login-btn" name="login_btn" value="Login">
-
+                <div class="signup_link">
+                    Tidak Punya Akun? <a href="register.php">Register</a>
+                    
+                </div>
         </form>
     </div>
 </body>

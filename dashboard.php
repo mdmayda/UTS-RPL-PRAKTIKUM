@@ -41,7 +41,7 @@ if (isset($_GET['logout'])) {
 
             <ul class="navigation">
                 <li><a href="home.php">HOME</a></li>
-                <li><a href="dashboard.php" class="active" >DASHBOARD</a></li>
+                <li><a href="dashboard.php" class="active">DASHBOARD</a></li>
                 <li><a href="logbook.php">LOG BOOK</a></li>
                 <li><a href="aboutus.php">ABOUT US</a></li>
                 <li><a href="profile.php">
@@ -50,8 +50,41 @@ if (isset($_GET['logout'])) {
                 <span><a href="home.php?logout=1" id="logout-btn" class="btn btn-danger">LOG OUT</a></span>
             </ul>
         </nav>
-       
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img\test.png" class="card-img-middle" alt="Gambar Obat 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Nama Obat 1</h5>
+                                <p class="card-text">Kuantitas: 10 tablet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img\test.png" class="card-img-middle" alt="Gambar Obat 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Nama Obat 2</h5>
+                                <p class="card-text">Kuantitas: 20 tablet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img\test.png" class="card-img-middle" alt="Gambar Obat 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Nama Obat 3</h5>
+                                <p class="card-text">Kuantitas: 30 tablet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
+    </main>
+
 
 
 </body>
