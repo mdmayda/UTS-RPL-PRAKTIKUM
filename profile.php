@@ -41,9 +41,9 @@ if (isset($_GET['logout'])) {
             <ul class="navigation">
                 <li><a href="home.php">HOME</a></li>
                 <li><a href="dashboard.php" >DASHBOARD</a></li>
-                <li><a href="logbook.php" class="active" >LOG BOOK</a></li>
+                <li><a href="logbook.php" >LOG BOOK</a></li>
                 <li><a href="aboutus.php">ABOUT US</a></li>
-                <li><a href="profile.php">
+                <li><a href="profile.php" class="active">
                         <?php echo $_SESSION['aptk_name'] ?>
                     </a></li>
                 <span><a href="home.php?logout=1" id="logout-btn" class="btn btn-danger">LOG OUT</a></span>

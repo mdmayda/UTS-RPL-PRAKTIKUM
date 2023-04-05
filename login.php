@@ -8,37 +8,37 @@ if (isset($_SESSION['logged_in'])) {
 }
 
 if (isset($_POST['login_btn'])) {
-    $email = $_POST['user_email'];
-    $password = ($_POST['user_password']);
+    $aptk_email = $_POST['aptk_email'];
+    $aptk_password = ($_POST['aptk_password']);
 
-    $query = "SELECT user_id, user_name, user_email, user_password, user_phone,
-        user_major, user_photo FROM apoteker
-        WHERE user_email = ? AND user_password = ? LIMIT 1";
+    $query = "SELECT aptk_id, aptk_name, aptk_email, aptk_password, aptk_phone,
+        major, aptk_photo FROM apoteker
+        WHERE aptk_email = ? AND aptk_password = ? LIMIT 1";
 
     $stmt_login = $conn->prepare($query);
-    $stmt_login->bind_param('ss', $email, $password);
+    $stmt_login->bind_param('ss', $aptk_email, $aptk_password);
 
     if ($stmt_login->execute()) {
         $stmt_login->bind_result(
-            $user_id,
-            $user_name,
-            $user_email,
-            $user_password,
-            $user_phone,
-            $user_major,
-            $user_photo
+            $aptk_id,
+            $aptk_name,
+            $aptk_email,
+            $aptk_password,
+            $aptk_phone,
+            $major,
+            $aptk_photo
         );
         $stmt_login->store_result();
 
         if ($stmt_login->num_rows() == 1) {
             $stmt_login->fetch();
 
-            $_SESSION['user_id'] = $user_id;
-            $_SESSION['user_name'] = $user_name;
-            $_SESSION['user_email'] = $user_email;
-            $_SESSION['user_phone'] = $user_phone;
-            $_SESSION['user_major'] = $user_major;
-            $_SESSION['user_photo'] = $user_photo;
+            $_SESSION['aptk_id'] = $aptk_id;
+            $_SESSION['aptk_name'] = $aptk_name;
+            $_SESSION['aptk_email'] = $aptk_email;
+            $_SESSION['aptk_phone'] = $aptk_phone;
+            $_SESSION['major'] = $major;
+            $_SESSION['aptk_photo'] = $aptk_photo;
             $_SESSION['logged_in'] = true;
 
             header('location:home.php?message=Logged in successfully');
@@ -80,11 +80,11 @@ if (isset($_POST['login_btn'])) {
                     echo $_GET['error'];
                 } ?>
                 <div class="txt_field">
-                    <input type="email" name="user_email" class="form-control" id="user_email" required>
+                    <input type="email" name="aptk_email" class="form-control" id="aptk_email" required>
                     <label>Username</label>
                 </div>
                 <div class="txt_field">
-                    <input type="password" name="user_password" class="form-control" required>
+                    <input type="password" name="aptk_password" class="form-control" required>
                     <label>Password</label>
                 </div>
                 <input type="submit" id="login-btn" name="login_btn" value="Login">

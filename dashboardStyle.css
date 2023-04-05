@@ -6,6 +6,8 @@ body {
     /* background : #f5f5f5; */
 }
 
+
+/*navigation start*/
 .logo { 
     padding-left: 10px;
     width: 75px;
@@ -59,7 +61,7 @@ body {
 
 .active {
     text-decoration: underline ;
-    background-color: #ffae42;
+    background-color: #71C8F1;
     border-radius: 10px;
     padding: 5px;
 }
@@ -73,6 +75,9 @@ body {
 .active:hover {
     color : white !important; 
 }
+/*navigation end*/
+
+
 
 .footer {
     left: 0;

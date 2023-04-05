@@ -10,9 +10,9 @@ if (!isset($_SESSION['logged_in'])) {
 if (isset($_GET['logout'])) {
     if (isset($_SESSION['logged_in'])) {
         unset($_SESSION['logged_in']);
-        unset($_SESSION['user_email']);
-        unset($_SESSION['user_name']);
-        unset($_SESSION['user_photo']);
+        unset($_SESSION['aptk_email']);
+        unset($_SESSION['aptk_name']);
+        unset($_SESSION['aptk_photo']);
         header('location: login.php');
         exit;
     }
@@ -28,7 +28,6 @@ if (isset($_GET['logout'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="homeStyle.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
 </head>
 
@@ -44,8 +43,8 @@ if (isset($_GET['logout'])) {
                 <li><a href="dashboard.php">DASHBOARD</a></li>
                 <li><a href="logbook.php">LOG BOOK</a></li>
                 <li><a href="aboutus.php">ABOUT US</a></li>
-                <li><a href="/">
-                        <?php echo $_SESSION['user_name'] ?>
+                <li><a href="profile.php">
+                        <?php echo $_SESSION['aptk_name'] ?>
                     </a></li>
                 <span><a href="home.php?logout=1" id="logout-btn" class="btn btn-danger">LOG OUT</a></span>
             </ul>
