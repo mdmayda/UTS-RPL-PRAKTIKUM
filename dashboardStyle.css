@@ -110,27 +110,33 @@ body {
     display: flex;
   }
   
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  .card-img-top {
-    max-height: 250px;
-    object-fit: cover;
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .card-text {
-    font-size: 1rem;
-    color: #888;
-  }
-
-  .card-container {
-    display: flex;
-    justify-content: space-between;
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
     align-items: center;
+    justify-items: center;
+  }
+  
+  .card {
+    width: 18rem;
+    height: 100%;
+  }
+  
+  .no-results-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 20px auto;
+    gap: 1rem;
+    color: #666;
+    font-size: 1.2rem;
+  }
+  
+  .no-results-message svg {
+    opacity: 50%;
   }
