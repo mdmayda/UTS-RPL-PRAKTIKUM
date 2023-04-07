@@ -1,6 +1,9 @@
 <?php
 session_start();
+include('Layout/header.php');
 include('connection.php');
+
+
 
 if (!isset($_SESSION['logged_in'])) {
     header('location: login.php');
@@ -19,6 +22,7 @@ if (isset($_GET['logout'])) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,47 +30,19 @@ if (isset($_GET['logout'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="homeStyle.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  
+    <title>Home</title>
 </head>
 
 <body>
-    <div class="fContainer">
-        <nav class="wrapper">
-            <span>
-                <img src="img/tubes.png" class="logo">POTION PARLOR
-            </span>
-
-            <ul class="navigation">
-                <li><a href="/" class="active">HOME</a></li>
-                <li><a href="dashboard.php">DASHBOARD</a></li>
-                <li><a href="logbook.php">LOG BOOK</a></li>
-                <li><a href="aboutus.php">ABOUT US</a></li>
-                <li><a href="profile.php">
-                        <?php echo $_SESSION['aptk_name'] ?>
-                    </a></li>
-                <span><a href="home.php?logout=1" id="logout-btn" class="btn btn-danger">LOG OUT</a></span>
-            </ul>
-        </nav>
-        <div class="main-content">
-            <img class="image" src="img\cuate.png">
-            <h2>
-                TEST
-            </h2>
-        </div>
-    </div>
-
+    
+a
 
 </body>
-<footer>
-    <center>
-        <div class="footer">
-            <p>
-                POTION PARLOR
-            </p>
-        </div>
-    </center>
-</footer>
+
+<?php
+include('Layout/footer.php');
+?>
 
 </html>

@@ -2,6 +2,7 @@
 session_start();
 include('connection.php');
 include('Layout/header.php');
+include('Layout/footer.php');
 
 if (!isset($_SESSION['logged_in'])) {
     header('location: login.php');
